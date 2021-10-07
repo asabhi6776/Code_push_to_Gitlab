@@ -1,0 +1,1 @@
+for repo in $(curl -H "PRIVATE-TOKEN: gUgoppM_TBsFrWgaXYzh" "https://gitlab.com/api/v4/users/johntheh4cker/projects/?page=1&per_page=48" | jq .[].ssh_url_to_repo | tr -d '"'); do git clone $repo; done;
